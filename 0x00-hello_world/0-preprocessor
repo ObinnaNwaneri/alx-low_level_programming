@@ -1,2 +1,2 @@
 #!/bin/bash
-char c = $CFILE;
+cat $CFILE >> c
