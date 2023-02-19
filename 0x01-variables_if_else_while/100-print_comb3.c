@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 
 /**
@@ -17,7 +18,7 @@ int main(void)
 			putchar((n1 % 10) + '0');
 			putchar((n2 % 10) + '0');
 
-			if (n1 + n2 != '89')
+			if (strcat(n1, n2) != '89')
 			{
 				putchar(',');
 				putchar(' ');
