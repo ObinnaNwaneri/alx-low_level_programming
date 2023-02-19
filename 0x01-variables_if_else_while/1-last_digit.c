@@ -16,7 +16,7 @@ int main(void)
 
 	int lastNum;
 
-	lastNum = n % 10
+	lastNum = n % 10;
 
 	if (lastNum > 5)
 	{
