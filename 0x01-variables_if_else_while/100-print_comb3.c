@@ -16,17 +16,7 @@ int main(void)
 	{
 		for (n = 0; n < 10; n++)
 		{
-			if (number[n] != '00', '11, '22', '33', '44', '55',
-					'66', '77', '88', '99')
-			{
-				putchar(number[n]);
-
-				if (number[n] != '99')
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar(number[n]);
 		}
 	}
 
