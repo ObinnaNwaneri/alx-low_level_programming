@@ -18,9 +18,9 @@ int main(void)
 		{
 			if (number[n] != 9)
 			{
-				break
+				break;
 			}
-			putchar(number[n])
+			putchar(number[n]);
 		}
 	}
 
