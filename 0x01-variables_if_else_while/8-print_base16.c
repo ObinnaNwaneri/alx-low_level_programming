@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * main - use putchar to prints all single digit numbers of base 16
