@@ -18,7 +18,10 @@ int main(void)
 
 		if (x == 'Z')
 		{
-			putchar (x);
+			for (; x <= 'Z'; x++)
+			{
+				putchar (x);
+			}
 		}
 	}
 	putchar ('\n');
