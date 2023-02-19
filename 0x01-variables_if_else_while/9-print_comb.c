@@ -15,8 +15,12 @@ int main(void)
 	for (n = 0; n < 10; n++)
 	{
 		putchar(number[n]);
-		putchar(',');
-		putchar(' ');
+
+		if (number[n] != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 
 	putchar ('\n');
