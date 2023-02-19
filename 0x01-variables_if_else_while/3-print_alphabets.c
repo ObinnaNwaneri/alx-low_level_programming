@@ -18,11 +18,11 @@ int main(void)
 
 		if (x == 'Z')
 		{
-			int y = 'A'
+			int x = 'A';
 
-			for (; y <= 'Z'; y++)
+			for (; x <= 'Z'; x++)
 			{
-				putchar (y);
+				putchar (x);
 			}
 		}
 	}
