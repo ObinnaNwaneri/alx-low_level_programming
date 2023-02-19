@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	int x = 'A'
+	int x = 'A';
 
 	for (; x <= 'Z'; x++)
 	{
