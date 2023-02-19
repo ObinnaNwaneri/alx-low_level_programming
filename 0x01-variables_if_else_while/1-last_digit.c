@@ -14,9 +14,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int lastNum;
-
-	lastNum = n % 10;
+	int lastNum = n % 10;
 
 	if (lastNum > 5)
 	{
