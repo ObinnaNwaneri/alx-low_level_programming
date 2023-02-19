@@ -14,7 +14,12 @@ int main(void)
 
 	for (; x <= 'Z'; x++)
 	{
-		putchar (tolower(x), x);
+		putchar (tolower(x));
+
+		if (x == 'Z')
+		{
+			putchar (x);
+		}
 	}
 	putchar ('\n');
 
