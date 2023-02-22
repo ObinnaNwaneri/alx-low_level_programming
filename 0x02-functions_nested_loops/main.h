@@ -1,6 +1,6 @@
 #ifndef main_h
 #define main_h
 
-char print_out(char string);
+int print_out(int string);
 
 #endif
