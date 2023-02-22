@@ -7,7 +7,7 @@ int main(void)
 
 	while (*x)
 	{
-		print_out(x);
+		print_out(*x);
 		x++;
 	}
 	print_out('\n');
