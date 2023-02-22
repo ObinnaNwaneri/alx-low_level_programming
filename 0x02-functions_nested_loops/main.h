@@ -1,3 +1,1 @@
-
-int print_out(string){
-	return(string);
+char print_out(char string);

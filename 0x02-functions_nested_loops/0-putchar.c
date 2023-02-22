@@ -3,6 +3,14 @@
 
 int main(void)
 {
-	print_out("_putchar\n");
+	char x = "_putchar";
+
+	while (x)
+	{
+		print_out(x);
+		x++;
+	}
+	print_out('\n');
+
 	return (0);
 }
