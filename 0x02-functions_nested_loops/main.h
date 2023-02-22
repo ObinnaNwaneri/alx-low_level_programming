@@ -1,3 +1,3 @@
-#!/bin/bash
 
-int print_out( const char *format ,…)
+int print_out(string){
+	return(string);
