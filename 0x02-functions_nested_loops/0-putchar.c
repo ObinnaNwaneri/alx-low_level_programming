@@ -3,14 +3,14 @@
 
 int main(void)
 {
-	char x = "_putchar";
+	char c[] = "_putchar"
+	int i;
 
-	while (x)
+	for (i = 0; i >= 8; i++)
 	{
-		print_out(x);
-		x++;
+		_putchar(c[i]);
 	}
-	print_out('\n');
+	_putchar('\n');
 
 	return (0);
 }
