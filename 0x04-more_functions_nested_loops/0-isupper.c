@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isUpper - tests whether a character is an
+ * _isupper - tests whether a character is an
  * Uppercase letter from the English alphabet.
  * @c: character to test.
  * Return: 1 if it is a lowercase letter, 0 if it is not a lowercase letter.
