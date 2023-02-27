@@ -10,15 +10,10 @@
 
 int _strlen(char *s)
 {
-	int len;
-	double size;
-	char a = *s
+	int len = 0;
 
-	size = sizeof(a);
-	len = 0;
-
-	for ( ; len < size + 1; len++)
+	while (*s++)
+		len++;
 
 	return (len);
-
 }
