@@ -10,10 +10,10 @@
 
 int _strlen(char *s)
 {
-	int length;
+	int len;
 
-	length = sizeof(*s) / sizeof(*s[0]);
+	for (len = o, len <= sizeof(*s), len++)
 
-	return (length);
+	return (len);
 
 }
