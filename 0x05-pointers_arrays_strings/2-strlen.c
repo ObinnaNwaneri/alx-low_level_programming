@@ -14,8 +14,9 @@ int _strlen(char *s)
 	int size;
 
 	size = sizeof(*s);
+	len = 0;
 
-	for (len = 0, (len < size + 1), len++)
+	for ( ; (len < size + 1); len++);
 
 	return (len);
 
