@@ -13,10 +13,10 @@ int _strlen(char *s)
 	int len;
 	int size;
 
-	size = sizeof("%s", *s);
+	size = sizeof("%d", *s);
 	len = 0;
 
-	for ( ; (len < size + 1); len++);
+	for ( ; len < size + 1; len++)
 
 	return (len);
 
