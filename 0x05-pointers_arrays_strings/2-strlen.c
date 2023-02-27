@@ -11,9 +11,10 @@
 int _strlen(char *s)
 {
 	int len;
-	int size;
+	double size;
+	char a = *s
 
-	size = sizeof("%d" *s);
+	size = sizeof(a);
 	len = 0;
 
 	for ( ; len < size + 1; len++)
