@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "main.h"
+`#include "main.h"
 
 /**
  * *_strcat - A function that concatenates two strings.
