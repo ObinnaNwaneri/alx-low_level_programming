@@ -1,57 +1,37 @@
 #include "main.h"
 
 /**
- * palind2 - obtains length of a
+ * prime2 - Makes possible to evaluate from 1 to n
  *
- * @a: string
- * @l: integer to count length
+ * @a: same number as n
+ * @b: number that iterates from 1 to n
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int palind2(char *a, int l)
+int prime2(int a, int b)
 {
-	if (*a == 0)
-		return (l - 1);
-
-	return (palind2(a + 1, l + 1));
+	if (a == b)
+		return (1);
+	else if (a % b == 0)
+		return (0);
+	return (prime2(a, b + 1));
 }
 
 /**
- * palind3 - compares string vs string reverse
+ * is_prime_number - checks if a number is prime
  *
- * @a: string
- * @l: length
+ * @n: Number Integer
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int palind3(char *a, int l)
+int is_prime_number(int n)
 {
-	if (*a != *(a + l))
+	if (n <= 1)
 		return (0);
 
-	else if (*a == 0)
-		return (1);
-
-	return (palind3(a + 1, l - 2));
-}
-
-/**
- * is_palindrome - checks if a string is a palindrome
- *
- * @s: string to evaluate
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-int is_palindrome(char *s)
-{
-	int l;
-
-	l = palind2(s, 0);
-	return (palind3(s, l));
+	return (prime2(n, 2));
 }
