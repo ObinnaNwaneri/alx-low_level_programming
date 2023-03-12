@@ -11,7 +11,7 @@
 
 int main(int argc, char* argv[])
 {
-	_putcar("%d\n", argv[0]);
+	_putcar("%s\n", argv[0]);
 
 	return 0;
 }
