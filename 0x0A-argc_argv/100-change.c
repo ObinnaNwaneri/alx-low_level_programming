@@ -38,6 +38,7 @@ int coinConverter(int i)
 
 		count++;
 	}
+
 	return (count);
 }
 
