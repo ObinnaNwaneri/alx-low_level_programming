@@ -7,7 +7,7 @@
  *
  *@str: string
  *@av: arguments
-
+ *
  * Return: a pointer to a new string
  */
 
