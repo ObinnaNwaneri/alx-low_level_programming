@@ -4,24 +4,16 @@
 
 /**
  * strtow - concatenates all the arguments of your program
- *
  *@str: string
  *@av: arguments
- *
  * Return: a pointer to a new string
  */
-
 char **strtow(char *str)
 {
 	int i, w, j, k, count, m, wordf;
-	char **p;
-	char *x;
+	char **p; *x;
 
-	w = 0;
-	j = 0;
-	i = 0;
-	count = 0;
-
+	w = 0; j = 0; i = 0; count = 0;
 	if (*str == '\0' || str == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
@@ -48,21 +40,16 @@ char **strtow(char *str)
 			{
 				for (k = 0; k <= j; k++)
 				{
-					x = p[k];
-					free(x);
+					x = p[k]; free(x);
 				}
-				free(p);
-				return (NULL);
+				free(p);return (NULL);
 			}
 			for (m = 0; wordf < i; wordf++)
 			{
-				p[j][m] = str[wordf];
-				m++;
+				p[j][m] = str[wordf]; m++;
 			}
-			p[j][m] = '\0';
-			j++;
+			p[j][m] = '\0';j++;
 		}
 	}
-	p[j] = NULL;
-	return (p);
+	p[j] = NULL;return (p);
 }
