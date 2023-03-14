@@ -1,34 +1,43 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * _strdup - Entry point
+ * argstostr - main entry
  *
- *@str: string we need to duplicate
+ * @ac: int input
+ * @av: double pointer array
  *
- * Return: a pointer to the duplicated string or NULL
+ * Return: 0
  */
 
-char *_strdup(char *str)
+char *argstostr(int ac, char **av)
 {
-	char *strnew = NULL;
-	unsigned int i;
-	int n;
+	int i, n, r = 0, l = 0;
+	char *str;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+		for (n = 0; av[i][n]; n++)
+			l++;
+	}
+	l += ac;
+	str = malloc(sizeof(char) * l + 1);
 
 	if (str == NULL)
 		return (NULL);
-	for (n = 0; str[n] != '\0'; n++)
-		;
-	strnew = (char *)malloc(n + 1 * sizeof(char));
-	if (strnew != NULL)
+	for (i = 0; i < ac; i++)
 	{
-		for (i = 0; str[i] != '\0'; i++)
-			strnew[i] = str[i];
-	} else
-	{
-		return (NULL);
+		for (n = 0; av[i][n]; n++)
+		{
+			str[r] = av[i][n];
+			r++;
+		}
+		if (str[r] == '\0')
+		{
+			str[r++] = '\n';
+		}
 	}
-	strnew[i] = '\0';
-	return (strnew);
+	return (str);
 }
+
