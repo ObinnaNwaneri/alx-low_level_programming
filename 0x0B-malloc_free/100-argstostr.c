@@ -3,47 +3,31 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of your program
+ * _strdup - Entry point
  *
- *@ac: number of arguments
- *@av: arguments
+ *@str: string we need to duplicate
 
- * Return: a pointer to a new string
+ * Return: a pointer to the duplicated string or NULL
  */
-
-char *argstostr(int ac, char **av)
+char *_strdup(char *str)
 {
-	int i;
-	int j;
-	char *p = NULL;
-	int k;
-	int ext;
+	char *strnew = NULL;
+	unsigned int i;
+	int n;
 
-	k = 0;
-	ext = 0;
-	if (ac == 0 || av == NULL)
+	if (str == NULL)
 		return (NULL);
-	for (i = 0; i < ac; i++)
+	for (n = 0; str[n] != '\0'; n++)
+		;
+	strnew = (char *)malloc(n + 1 * sizeof(char));
+	if (strnew != NULL)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		{
-			ext++;
-		}
-	}
-
-	p = (char *)malloc(ext + ac + 1 * sizeof(char));
-	if (p == NULL)
+		for (i = 0; str[i] != '\0'; i++)
+			strnew[i] = str[i];
+	} else
+	{
 		return (NULL);
-	for (i = 0; i < ac; i++)
-	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		{
-			p[k] = av[i][j];
-			k++;
-		}
-		p[k] = '\n';
-		k++;
 	}
-	p[k] = '\0';
-	return (p);
+	strnew[i] = '\0';
+	return (strnew);
 }
