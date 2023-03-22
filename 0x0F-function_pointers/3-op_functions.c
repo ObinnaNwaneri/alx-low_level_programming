@@ -6,11 +6,9 @@
  * @a:the first number
  * @b:the second number.
  *
-(* a blank line
- *
  * Description: this function adds two numbers)?
+ * section header: 3-calc.h)*
  *
-(* section header: 3-calc.h)*
  * Return: return the result of the add.
  */
 
@@ -23,12 +21,10 @@ int op_add(int a, int b)
  * op_sub - this function sub two numbers
  *
  * @a:the first number
- * @b:the second number.
- *
-(* a blank line
+ * @b:the second numbert
  *
  * Description: this function sub two numbers)?
-(* section header: 3-calc.h)*
+ * section header: 3-calc.h)*
  *
  * Return: return the result of the sub.
  */
@@ -44,11 +40,9 @@ int op_sub(int a, int b)
  * @a:the first number
  * @b:the second number.
  *
-(* a blank line
- *
  * Description: this function multiply two numbers)?
  *
-(* section header: 3-calc.h)*
+ * section header: 3-calc.h)*
  *
  * Return: return the result of the multiply.
  */
@@ -64,11 +58,8 @@ int op_mul(int a, int b)
  * @a:the first number
  * @b:the second number.
  *
-(* a blank line
- *
  * Description: this function divide two numbers)?
- *
-(* section header: 3-calc.h)*
+ * section header: 3-calc.h)*
  *
  * Return: return the result of the divide.
  */
@@ -87,11 +78,9 @@ int op_div(int a, int b)
  * @a:the first number
  * @b:the second number.
  *
-(* a blank line
- *
  * Description: this function calculate the module)?
  *
-(* section header: 3-calc.h)*
+ * section header: 3-calc.h)*
  *
  * Return: return the result of the module.
  */

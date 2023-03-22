@@ -2,10 +2,10 @@
 
 /**
  * get_op_func - get the operator and redirect to the func.
- * 
+ *
  * @s: the operator
  * a blank line
- * 
+ *
  * Description: get the operator and redirect to the func.
  *
  * section header: 3-calc.h
