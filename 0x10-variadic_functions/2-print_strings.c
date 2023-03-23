@@ -1,108 +1,38 @@
 #include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
 
 /**
- * integer_print - print integers.
+ * print_strings - Prints strings, followed by a new line.
+ * @separator: The string to be printed between strings.
+ * @n: The number of strings passed to the function.
+ * @...: A variable number of strings to be printed.
  *
- * @args: the list of parameters
- * Description: this function prints integers)?
- * section header: the header of this function is variadic_functions.h)*
- * Return:no return a void func.
+ * Description: If separator is NULL, it is not printed.
+ * If one of the strings if NULL, (nil) is printed instead.
  */
 
-void integer_print(va_list args)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
-	printf("%d", va_arg(args, int));
-}
+	va_list strings;
+	char *str;
+	unsigned int index;
 
-/**
- * char_print - print chars.
- *
- * @args: the list of parameters
- * Description: this function prints chars)?
- * section header: the header of this function is variadic_functions.h)*
- * Return: no return a void func.
- */
+	va_start(strings, n);
 
-void char_print(va_list args)
-{
-	printf("%c", va_arg(args, int));
-}
+	for (index = 0; index < n; index++)
 
-/**
- * string_print - print strings
- *
- * @args: the list of parameters
- * Description: this function prints strings)?
- * section header: the header of this function is variadic_functions.h)*
- * Return:no return a void func.
-*/
+		str = va_arg(strings, char *);
 
-void string_print(va_list args)
-{
-	char *s;
+	if (str == NULL)
+		printf("(nil)");
+	else
+		printf("%s", str);
 
-	s = va_arg(args, char *);
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s", s);
-}
-
-/**
- * float_print - print floats.
- *
- * @args: the list of parameters
- * Description: this function prints floats)?
- * section header: the header of this function is variadic_functions.h)*
- * Return:no return a void func.
- */
-
-void float_print(va_list args)
-{
-	printf("%f", va_arg(args, double));
-}
-
-/**
- * print_all - print anything.
- *
- * @format: the paramaters
- * Description: this function prints anything)?
- * section header: the header of this function is variadic_functions.h)*
- * Return: this function no return
- */
-
-void print_all(const char * const format, ...)
-{
-	va_list args;
-	int i, j;
-	char *separator;
-	args_t arguments[] = {
-		{"c", char_print},
-		{"i", integer_print},
-		{"f", float_print},
-		{"s", string_print},
-		{NULL, NULL}
-	};
-
-	va_start(args, format);
-	i = 0;
-	separator = "";
-
-	while (format != NULL && *(format + i) != '\0')
+	if (index != (n - 1) && separator != NULL)
+		printf("%s", separator);
 	{
-		j = 0;
-		while (j < 4)
-		{
-			if (*(format + i) == *(arguments[j]).format)
-			{
-				printf("%s", separator);
-				arguments[j].function(args);
-				separator = ", ";
-
-			}
-			j++;
-		}
-		i++;
+		printf("\n");
+		va_end(strings);
 	}
-	printf("\n");
-	va_end(args);
 }
